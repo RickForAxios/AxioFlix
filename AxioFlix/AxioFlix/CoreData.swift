@@ -19,9 +19,10 @@ func persistMovie(_ movie: MovieModel, inContext context: NSManagedObjectContext
     
     let managedObject = NSEntityDescription.insertNewObject(forEntityName: "Movie", into: context)
     
+    managedObject.setPrimitiveValue(movie.id, forKey: "id")
     managedObject.setValue(movie.title, forKey: "title")
     managedObject.setValue(movie.overview, forKey: "overview")
-    managedObject.setPrimitiveValue(Double(0), forKey: "popularity")
+    managedObject.setPrimitiveValue(movie.popularity, forKey: "popularity")
     managedObject.setValue("", forKey: "backdropPath")
     managedObject.setValue("", forKey: "posterPath")
     managedObject.setValue(Date(), forKey: "releaseDate")
@@ -30,6 +31,12 @@ func persistMovie(_ movie: MovieModel, inContext context: NSManagedObjectContext
 func persistMovies(_ movies: [MovieModel]) {
     DispatchQueue.main.async {
         getPersistentContainer().performBackgroundTask { context in
+            
+            // The CD model lists "id" as a constraint.
+            // Setting overwrite below means any incoming movies that
+            // we already have will simply be overwritten now
+            context.mergePolicy = NSMergePolicy.overwrite
+            
             movies.forEach({ (movie) in
                 persistMovie(movie, inContext: context)
             })

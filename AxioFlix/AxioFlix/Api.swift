@@ -15,7 +15,7 @@ struct MovieModel: Codable {
     let title: String
     let overview: String
     let popularity: Double
-    let id: Int
+    let id: Int64
 }
 
 struct MoviesModel: Codable {
