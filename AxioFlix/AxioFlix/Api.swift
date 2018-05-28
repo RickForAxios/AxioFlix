@@ -8,6 +8,9 @@
 
 import Foundation
 
+// Simple model of the TMDb data.
+// This makes it simple to go from JSON to Swift,
+// and then to CoreData
 struct MovieModel: Codable {
     let title: String
     let overview: String
@@ -32,13 +35,8 @@ class Api {
                     // TODO: do something appropriate with this error
                     print("Got an error when hitting the API: \(e)")
                 } else if let movieData = data {
-                    // TODO: JSON werk
-                    
-//                    print(movieData)
-                    
                     if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
-                        print("yay movies!")
-                        print(movies)
+                        print("decoded movies")
                         
                         DataController.sharedInstance.addMovies(movies: movies.results)
                     } else {

@@ -9,7 +9,7 @@
 import Foundation
 
 // We default to sorting by Popularity. A good enhancement would be to let the user sort by other fields.
-let DefaultSortField = "DefaultSortField"
+let DefaultSortField = "popularity"
 
 // The API hits just 1 URL for now
 let TmdbApiUrl = "https://api.themoviedb.org/3/discover/movie"
