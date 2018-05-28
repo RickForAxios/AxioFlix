@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052FCD314423DC0C4CCFBDA8 /* Pods_AxioFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0EC7BFC7F4B2C39881CA2 /* Pods_AxioFlix.framework */; };
 		0BA1E0A920B9E95A00529FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */; };
 		0BA1E0AE20B9E95A00529FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */; };
 		0BA1E0B120B9E95A00529FD8 /* AxioFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0AF20B9E95A00529FD8 /* AxioFlix.xcdatamodeld */; };
@@ -38,6 +39,8 @@
 		0BA1E0FF20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */; };
 		0BA1E10020BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */; };
 		0BA1E10120BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */; };
+		2A68222FF9E258E0FE99F8F5 /* Pods_AxioFlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4945C5C119678F6CEC894FB /* Pods_AxioFlixUITests.framework */; };
+		EF38576D1BCC17B60EABAA8F /* Pods_AxioFlixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B822E7D1E31A6CE45C4EE29C /* Pods_AxioFlixTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0334DA18647D66AFCE37C012 /* Pods-AxioFlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixUITests/Pods-AxioFlixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0BA1E0A520B9E95A00529FD8 /* AxioFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxioFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BA1E0AD20B9E95A00529FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 		0BA1E0F620BB97A500529FD8 /* MovieMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMO.swift; sourceTree = "<group>"; };
 		0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTVCDataSource.swift; sourceTree = "<group>"; };
 		0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTVCFetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
+		718D777AA0FE47BF9F897B7E /* Pods-AxioFlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixUITests/Pods-AxioFlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C714C6C5FFC2438D1053C08 /* Pods-AxioFlixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixTests/Pods-AxioFlixTests.release.xcconfig"; sourceTree = "<group>"; };
+		B472EEBF5B1C55E529259855 /* Pods-AxioFlixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixTests/Pods-AxioFlixTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B822E7D1E31A6CE45C4EE29C /* Pods_AxioFlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxioFlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5DC1C38166AECA19990ADF /* Pods-AxioFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlix.release.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlix/Pods-AxioFlix.release.xcconfig"; sourceTree = "<group>"; };
+		D7E0EC7BFC7F4B2C39881CA2 /* Pods_AxioFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxioFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47AC618C249FA2935E7CA64 /* Pods-AxioFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlix/Pods-AxioFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		F4945C5C119678F6CEC894FB /* Pods_AxioFlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxioFlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052FCD314423DC0C4CCFBDA8 /* Pods_AxioFlix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF38576D1BCC17B60EABAA8F /* Pods_AxioFlixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A68222FF9E258E0FE99F8F5 /* Pods_AxioFlixUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +128,8 @@
 				0BA1E0BF20B9E95D00529FD8 /* AxioFlixTests */,
 				0BA1E0CA20B9E95D00529FD8 /* AxioFlixUITests */,
 				0BA1E0A620B9E95A00529FD8 /* Products */,
+				DF7EA28F0E9ABDAFD0781D68 /* Pods */,
+				9D0DE72E967321AD6D141FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +182,29 @@
 			path = AxioFlixUITests;
 			sourceTree = "<group>";
 		};
+		9D0DE72E967321AD6D141FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0EC7BFC7F4B2C39881CA2 /* Pods_AxioFlix.framework */,
+				B822E7D1E31A6CE45C4EE29C /* Pods_AxioFlixTests.framework */,
+				F4945C5C119678F6CEC894FB /* Pods_AxioFlixUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF7EA28F0E9ABDAFD0781D68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F47AC618C249FA2935E7CA64 /* Pods-AxioFlix.debug.xcconfig */,
+				CA5DC1C38166AECA19990ADF /* Pods-AxioFlix.release.xcconfig */,
+				B472EEBF5B1C55E529259855 /* Pods-AxioFlixTests.debug.xcconfig */,
+				7C714C6C5FFC2438D1053C08 /* Pods-AxioFlixTests.release.xcconfig */,
+				718D777AA0FE47BF9F897B7E /* Pods-AxioFlixUITests.debug.xcconfig */,
+				0334DA18647D66AFCE37C012 /* Pods-AxioFlixUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BA1E0D020B9E95D00529FD8 /* Build configuration list for PBXNativeTarget "AxioFlix" */;
 			buildPhases = (
+				5183955C3FEFB8C1355E0B63 /* [CP] Check Pods Manifest.lock */,
 				0BA1E0A120B9E95A00529FD8 /* Sources */,
 				0BA1E0A220B9E95A00529FD8 /* Frameworks */,
 				0BA1E0A320B9E95A00529FD8 /* Resources */,
+				6D80F129781F82BC0B6956F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BA1E0D320B9E95D00529FD8 /* Build configuration list for PBXNativeTarget "AxioFlixTests" */;
 			buildPhases = (
+				E6F24BCAE8B370708D803F42 /* [CP] Check Pods Manifest.lock */,
 				0BA1E0B820B9E95D00529FD8 /* Sources */,
 				0BA1E0B920B9E95D00529FD8 /* Frameworks */,
 				0BA1E0BA20B9E95D00529FD8 /* Resources */,
@@ -207,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BA1E0D620B9E95D00529FD8 /* Build configuration list for PBXNativeTarget "AxioFlixUITests" */;
 			buildPhases = (
+				77350E589DCF8DF849FE45BB /* [CP] Check Pods Manifest.lock */,
 				0BA1E0C320B9E95D00529FD8 /* Sources */,
 				0BA1E0C420B9E95D00529FD8 /* Frameworks */,
 				0BA1E0C520B9E95D00529FD8 /* Resources */,
@@ -290,6 +334,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5183955C3FEFB8C1355E0B63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AxioFlix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D80F129781F82BC0B6956F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AxioFlix/Pods-AxioFlix-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AxioFlix/Pods-AxioFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77350E589DCF8DF849FE45BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AxioFlixUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F24BCAE8B370708D803F42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AxioFlixTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BA1E0A120B9E95A00529FD8 /* Sources */ = {
@@ -492,15 +611,13 @@
 		};
 		0BA1E0D120B9E95D00529FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F47AC618C249FA2935E7CA64 /* Pods-AxioFlix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlix/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -510,15 +627,13 @@
 		};
 		0BA1E0D220B9E95D00529FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5DC1C38166AECA19990ADF /* Pods-AxioFlix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlix/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -528,17 +643,14 @@
 		};
 		0BA1E0D420B9E95D00529FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B472EEBF5B1C55E529259855 /* Pods-AxioFlixTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlixTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -549,17 +661,14 @@
 		};
 		0BA1E0D520B9E95D00529FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C714C6C5FFC2438D1053C08 /* Pods-AxioFlixTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlixTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -570,16 +679,13 @@
 		};
 		0BA1E0D720B9E95D00529FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718D777AA0FE47BF9F897B7E /* Pods-AxioFlixUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlixUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlixUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -590,16 +696,13 @@
 		};
 		0BA1E0D820B9E95D00529FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0334DA18647D66AFCE37C012 /* Pods-AxioFlixUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q546HH8W3N;
 				INFOPLIST_FILE = AxioFlixUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickdt.AxioFlixUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
