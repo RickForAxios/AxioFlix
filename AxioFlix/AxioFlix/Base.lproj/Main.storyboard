@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="1YL-gN-hJU">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="100" id="1YL-gN-hJU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1YL-gN-hJU" id="0QX-Ec-Und">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zH-Lk-Ylt">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-y3-H2O">
+                                            <rect key="frame" x="16" y="40" width="46" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="oVq-r0-bZB"/>
+                                                <constraint firstAttribute="width" secondItem="Ui3-y3-H2O" secondAttribute="height" multiplier="1:1" id="rwA-Xw-GmE"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="3zH-Lk-Ylt" secondAttribute="trailing" constant="16" id="XlL-bg-eY4"/>
+                                        <constraint firstItem="3zH-Lk-Ylt" firstAttribute="top" secondItem="0QX-Ec-Und" secondAttribute="top" constant="11" id="fcw-Fa-50b"/>
+                                        <constraint firstItem="3zH-Lk-Ylt" firstAttribute="leading" secondItem="0QX-Ec-Und" secondAttribute="leading" constant="16" id="hJD-BQ-ycp"/>
+                                        <constraint firstItem="Ui3-y3-H2O" firstAttribute="leading" secondItem="0QX-Ec-Und" secondAttribute="leading" constant="16" id="qQM-60-zxF"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ui3-y3-H2O" secondAttribute="bottom" constant="13.5" id="vGr-rF-MFW"/>
+                                        <constraint firstItem="Ui3-y3-H2O" firstAttribute="top" secondItem="3zH-Lk-Ylt" secondAttribute="bottom" constant="8" id="z61-jr-JVN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yy-ng-nIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="30"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="29.23538230884558"/>
         </scene>
     </scenes>
 </document>

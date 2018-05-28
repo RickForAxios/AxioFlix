@@ -13,4 +13,5 @@ let DefaultSortField = "popularity"
 
 // The API hits just 1 URL for now
 let TmdbApiUrl = "https://api.themoviedb.org/3/discover/movie"
+let TmdbConfigUrl = "https://api.themoviedb.org/3/config"
 let TmdbApiKey = "1821c6b6049945b0e08619035590d15b"

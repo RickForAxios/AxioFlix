@@ -8,16 +8,25 @@
 
 import UIKit
 import CoreData
+import Kingfisher
 
 extension MoviesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
         
-        let object = self.fetchedResultsController.object(at: indexPath)
-        
-        if let dic = object as? NSManagedObject {
-            if let movieTitle = dic.value(forKey: "title") as? String {
-                cell.textLabel?.text = movieTitle
+        if let dic = self.fetchedResultsController.object(at: indexPath) as? NSManagedObject {
+            // title
+            if let movieTitle = dic.value(forKey: "title") as? String, let titleLabel = cell.viewWithTag(1) as? UILabel {
+                titleLabel.text = movieTitle
+            }
+            
+            // poster image
+            if let posterPath = dic.value(forKey: "posterPath") as? String, let posterImageView = cell.viewWithTag(2) as? UIImageView, let posterUrl = Api.sharedInstance.getImageUrl(for: posterPath) {
+                if (posterPath.trimmingCharacters(in: .whitespaces)) != "" {
+                    
+                    // Kingfisher smartly caches the images
+                    posterImageView.kf.setImage(with: posterUrl)
+                }
             }
         }
         

@@ -24,7 +24,7 @@ func persistMovie(_ movie: MovieModel, inContext context: NSManagedObjectContext
     managedObject.setValue(movie.overview, forKey: "overview")
     managedObject.setPrimitiveValue(movie.popularity, forKey: "popularity")
     managedObject.setValue("", forKey: "backdropPath")
-    managedObject.setValue("", forKey: "posterPath")
+    managedObject.setValue(movie.poster_path, forKey: "posterPath")
     managedObject.setValue(Date(), forKey: "releaseDate")
 }
 

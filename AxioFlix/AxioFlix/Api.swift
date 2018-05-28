@@ -14,6 +14,7 @@ import Foundation
 struct MovieModel: Codable {
     let title: String
     let overview: String
+    let poster_path: String
     let popularity: Double
     let id: Int64
 }
@@ -23,12 +24,36 @@ struct MoviesModel: Codable {
     let results: [MovieModel]
 }
 
+struct TmdbImagesConfiguration: Codable {
+    let secure_base_url: String
+    let poster_sizes: [String]
+}
+
+struct TmdbConfiguration: Codable {
+    let images: TmdbImagesConfiguration
+}
+
 class Api {
     static let sharedInstance = Api()
     private let decoder = JSONDecoder()
+    private var hasLoadedConfig = false
+    private var imagesBaseUrl: String = "https://image.tmdb.org/t/p"
+    private var posterSizes: [String] = ["w92"]
+    
+    init() {
+        self.loadConfiguration { (didLoad) in
+            if didLoad {
+                self.refresh()
+            }
+        }
+    }
     
     func refresh() {
-        if let apiUrl = self.getURL() {
+//        guard self.hasLoadedConfig else {
+//            return
+//        }
+        
+        if let apiUrl = self.makeDiscoverUrl() {
             URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
                 print("Api done")
                 if let e = error {
@@ -47,7 +72,13 @@ class Api {
         }
     }
     
-    private func getURL() -> URL? {
+    func getImageUrl(for imagePath: String) -> URL? {
+        let imageUrl = URL(string: self.imagesBaseUrl)?.appendingPathComponent("w92").appendingPathComponent(imagePath)
+        
+        return imageUrl
+    }
+    
+    private func makeDiscoverUrl() -> URL? {
         var urlComponents = URLComponents(string: TmdbApiUrl)!
         
         urlComponents.queryItems = [
@@ -61,5 +92,32 @@ class Api {
         ];
         
         return urlComponents.url
+    }
+    
+    private func loadConfiguration(_ callback: @escaping (Bool) -> ()) {
+        var urlComponents = URLComponents(string: TmdbConfigUrl)!
+        
+        urlComponents.queryItems = [
+            URLQueryItem(name: "api_key", value: TmdbApiKey)
+        ]
+        
+        URLSession.shared.dataTask(with: urlComponents.url!) { (data, response, error) in
+            if let e = error {
+                // we would do some canary logging here because it might mean the API is down
+                print("got an error from the API: \(e)")
+                
+                callback(false)
+            } else if let configData = data {
+                if let config = try? self.decoder.decode(TmdbConfiguration.self, from: configData) {
+                    self.imagesBaseUrl = config.images.secure_base_url
+                    self.posterSizes = config.images.poster_sizes
+                    self.hasLoadedConfig = true
+                    
+                    callback(true)
+                } else {
+                    callback(false)
+                }
+            }
+        }
     }
 }
