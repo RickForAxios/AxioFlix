@@ -36,10 +36,10 @@ class MoviesTableViewController: UITableViewController, NSFetchedResultsControll
     
     func initializeFetchedResultsController() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
-        let defaultSort = NSSortDescriptor(key: DefaultSortField, ascending: true)
+        let defaultSort = NSSortDescriptor(key: DefaultSortField, ascending: false)
         request.sortDescriptors = [defaultSort]
         
-        let moc = DataController.sharedInstance.persistentContainer.viewContext
+        let moc = getPersistentContainer().viewContext
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         self.fetchedResultsController.delegate = self
         

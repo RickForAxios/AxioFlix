@@ -38,7 +38,7 @@ class Api {
                     if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
                         print("decoded movies")
                         
-                        DataController.sharedInstance.addMovies(movies: movies.results)
+                        persistMovies(movies.results)
                     } else {
                         print("couldn't decode movie JSON")
                     }
