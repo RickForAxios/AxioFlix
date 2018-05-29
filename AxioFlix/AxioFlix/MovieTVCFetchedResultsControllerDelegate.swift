@@ -14,21 +14,6 @@ extension MoviesTableViewController {
         tableView.beginUpdates()
     }
     
-    // we don't have multiple sections, but here's a default implementation
-    // TODO: safe to remove?
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-//        switch type {
-//        case .insert:
-//            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .delete:
-//            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .move:
-//            break
-//        case .update:
-//            break
-//        }
-//    }
-    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
