@@ -43,6 +43,11 @@ extension MoviesTableViewController {
 //            if let detailsButton = cell.viewWithTag(4) as? UIButton {
 //                detailsButton.act
 //            }
+            
+            // overview
+            if let overview = dic.value(forKey: "overview") as? String, let overviewLabel = cell.viewWithTag(6) as? UILabel {
+                overviewLabel.text = overview
+            }
         }
         
         return cell

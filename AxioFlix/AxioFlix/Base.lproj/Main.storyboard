@@ -19,15 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="100" id="1YL-gN-hJU">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="140" id="1YL-gN-hJU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1YL-gN-hJU" id="0QX-Ec-Und">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zH-Lk-Ylt">
                                             <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="oVJ-NL-gzh"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -55,12 +58,22 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the movie overview and it could be quite long in theory. It will determine the height of the cell." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdj-Sn-YAc">
+                                            <rect key="frame" x="20" y="94" width="339" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="J2h-QT-Uq3" firstAttribute="leading" secondItem="hkg-Br-UXO" secondAttribute="leading" id="0mH-zk-rpa"/>
+                                        <constraint firstItem="pdj-Sn-YAc" firstAttribute="top" secondItem="Ui3-y3-H2O" secondAttribute="bottom" constant="8" id="3J4-Jk-8ZE"/>
+                                        <constraint firstAttribute="trailing" secondItem="pdj-Sn-YAc" secondAttribute="trailing" constant="16" id="9Ry-kc-PqR"/>
                                         <constraint firstItem="hkg-Br-UXO" firstAttribute="bottom" secondItem="Ui3-y3-H2O" secondAttribute="bottom" id="9vb-Ac-DFe"/>
                                         <constraint firstItem="YFK-xE-j73" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J2h-QT-Uq3" secondAttribute="trailing" id="C66-63-Dbc"/>
+                                        <constraint firstItem="pdj-Sn-YAc" firstAttribute="leading" secondItem="0QX-Ec-Und" secondAttribute="leading" constant="20" id="FUg-77-G5V"/>
                                         <constraint firstItem="J2h-QT-Uq3" firstAttribute="top" secondItem="Ui3-y3-H2O" secondAttribute="top" id="MBz-RY-zmL"/>
+                                        <constraint firstAttribute="bottom" secondItem="pdj-Sn-YAc" secondAttribute="bottom" constant="10.5" id="NQG-q1-eJV"/>
                                         <constraint firstAttribute="trailing" secondItem="3zH-Lk-Ylt" secondAttribute="trailing" constant="16" id="XlL-bg-eY4"/>
                                         <constraint firstAttribute="trailing" secondItem="YFK-xE-j73" secondAttribute="trailing" constant="16" id="bA5-Q5-Rq7"/>
                                         <constraint firstItem="3zH-Lk-Ylt" firstAttribute="top" secondItem="0QX-Ec-Und" secondAttribute="top" constant="11" id="fcw-Fa-50b"/>
@@ -68,7 +81,6 @@
                                         <constraint firstItem="hkg-Br-UXO" firstAttribute="centerX" secondItem="0QX-Ec-Und" secondAttribute="centerX" id="k8o-H1-fbd"/>
                                         <constraint firstItem="YFK-xE-j73" firstAttribute="centerY" secondItem="Ui3-y3-H2O" secondAttribute="centerY" id="mPO-ad-lwq"/>
                                         <constraint firstItem="Ui3-y3-H2O" firstAttribute="leading" secondItem="0QX-Ec-Und" secondAttribute="leading" constant="16" id="qQM-60-zxF"/>
-                                        <constraint firstAttribute="bottom" secondItem="Ui3-y3-H2O" secondAttribute="bottom" constant="13.5" id="vGr-rF-MFW"/>
                                         <constraint firstItem="Ui3-y3-H2O" firstAttribute="top" secondItem="3zH-Lk-Ylt" secondAttribute="bottom" constant="8" id="z61-jr-JVN"/>
                                     </constraints>
                                 </tableViewCellContentView>
