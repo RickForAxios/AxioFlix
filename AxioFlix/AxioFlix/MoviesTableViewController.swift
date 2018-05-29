@@ -14,10 +14,14 @@ import CoreData
 
 class MoviesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    var dateFormatter:DateFormatter!
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dateFormatter = DateFormatter()
+        self.dateFormatter.dateStyle = .medium
         
         Api.sharedInstance.refresh()
         

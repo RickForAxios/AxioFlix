@@ -28,13 +28,32 @@ extension MoviesTableViewController {
                     posterImageView.kf.setImage(with: posterUrl)
                 }
             }
+            
+            // release date
+            if let releaseDate = dic.value(forKey: "releaseDate") as? Date, let releaseDateLabel = cell.viewWithTag(3) as? UILabel {
+                releaseDateLabel.text = self.dateFormatter.string(from: releaseDate)
+            }
+            
+            // popularity score
+            if let popularity = dic.value(forKey: "popularity") as? Double, let popularityLabel = cell.viewWithTag(5) as? UILabel
+            {
+                popularityLabel.text = String(round(popularity))
+            }
+            
+//            if let detailsButton = cell.viewWithTag(4) as? UIButton {
+//                detailsButton.act
+//            }
         }
         
         return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.fetchedResultsController.sections?.count ?? 1
+        guard let sections = self.fetchedResultsController.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        
+        return sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
