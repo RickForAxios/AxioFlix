@@ -36,6 +36,6 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        self.overviewLabel.isHidden = true
+        self.overviewContainer.isHidden = true
     }
 }
