@@ -91,17 +91,17 @@
                                                     <rect key="frame" x="0.0" y="114.5" width="375" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very long label. It will wrap line and its content will determine the height of the stackview, and hence the cell." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhk-Yo-Zw0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                                            <rect key="frame" x="20" y="0.0" width="335" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="zhk-Yo-Zw0" secondAttribute="trailing" id="7Av-lz-gMg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zhk-Yo-Zw0" secondAttribute="trailing" constant="20" symbolic="YES" id="7Av-lz-gMg"/>
                                                         <constraint firstItem="zhk-Yo-Zw0" firstAttribute="top" secondItem="htZ-bo-Ale" secondAttribute="top" id="dSL-Yy-zPu"/>
                                                         <constraint firstAttribute="bottom" secondItem="zhk-Yo-Zw0" secondAttribute="bottom" priority="250" constant="20" symbolic="YES" id="nbQ-Bg-vuT"/>
-                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="leading" secondItem="htZ-bo-Ale" secondAttribute="leading" id="owy-cd-Ybs"/>
+                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="leading" secondItem="htZ-bo-Ale" secondAttribute="leading" constant="20" symbolic="YES" id="owy-cd-Ybs"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
