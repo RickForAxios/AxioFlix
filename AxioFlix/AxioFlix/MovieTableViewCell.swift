@@ -23,13 +23,11 @@ class MovieTableViewCell: UITableViewCell {
     
     weak var tableView: UITableView?
     
-    var overviewText:String = ""
-    
     @IBAction func showHideTouchUp(_ sender: Any) {
-        UIView.animate(withDuration: 0.3) {
-            self.overviewContainer.isHidden = !self.overviewContainer.isHidden
-            self.layoutIfNeeded()
-        }
+        let willBeHidden = !self.overviewContainer.isHidden
+        self.showHideButton.setTitle(willBeHidden ? "Show Overview" : "Hide Overview", for: .normal)
+        self.overviewContainer.isHidden = willBeHidden
+        self.layoutIfNeeded()
         
         if let table = self.tableView {
             table.beginUpdates()
