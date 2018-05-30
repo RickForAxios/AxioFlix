@@ -55,13 +55,13 @@ class Api {
         
         if let apiUrl = self.makeDiscoverUrl() {
             URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
-                print("Api done")
+//                print("Api done")
                 if let e = error {
                     // TODO: do something appropriate with this error
                     print("Got an error when hitting the API: \(e)")
                 } else if let movieData = data {
                     if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
-                        print("decoded movies")
+//                        print("decoded movies")
                         
                         persistMovies(movies.results)
                     } else {

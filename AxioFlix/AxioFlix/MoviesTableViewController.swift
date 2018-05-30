@@ -16,6 +16,7 @@ class MoviesTableViewController: UITableViewController, NSFetchedResultsControll
 
     var dateFormatter:DateFormatter!
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    var openMovieIds = Set<Int64>()
     
     override func viewDidLoad() {
         super.viewDidLoad()

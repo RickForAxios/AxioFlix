@@ -92,11 +92,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very long label. It will wrap line and its content will determine the height of the stackview, and hence the cell." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhk-Yo-Zw0">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                                            <color key="backgroundColor" red="0.2876030296" green="1" blue="0.31365411430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.3156868666" blue="0.95762299939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="zhk-Yo-Zw0" secondAttribute="trailing" id="7Av-lz-gMg"/>
                                                         <constraint firstItem="zhk-Yo-Zw0" firstAttribute="top" secondItem="htZ-bo-Ale" secondAttribute="top" id="dSL-Yy-zPu"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052FCD314423DC0C4CCFBDA8 /* Pods_AxioFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0EC7BFC7F4B2C39881CA2 /* Pods_AxioFlix.framework */; };
+		0B9193C620BF2CB600C55334 /* MovieTVCState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9193C520BF2CB600C55334 /* MovieTVCState.swift */; };
 		0B9A12C420BCE553004E654F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */; };
 		0BA1E0A920B9E95A00529FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */; };
 		0BA1E0AE20B9E95A00529FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0334DA18647D66AFCE37C012 /* Pods-AxioFlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixUITests/Pods-AxioFlixUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0B9193C520BF2CB600C55334 /* MovieTVCState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTVCState.swift; sourceTree = "<group>"; };
 		0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		0BA1E0A520B9E95A00529FD8 /* AxioFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxioFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0BA1E0EE20BA149200529FD8 /* Api.swift */,
 				0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */,
 				0BA1E0D920B9EC3300529FD8 /* MoviesTableViewController.swift */,
+				0B9193C520BF2CB600C55334 /* MovieTVCState.swift */,
 				0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */,
 				0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */,
 				0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */,
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9193C620BF2CB600C55334 /* MovieTVCState.swift in Sources */,
 				0BA1E0EB20BA0F6B00529FD8 /* CoreData.swift in Sources */,
 				0BA1E0DA20B9EC3300529FD8 /* MoviesTableViewController.swift in Sources */,
 				0BA1E0DF20B9EC6300529FD8 /* Movies.xcdatamodeld in Sources */,

@@ -13,7 +13,7 @@ import Kingfisher
 extension MoviesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
-        cell.tableView = self.tableView
+        cell.tableViewController = self
         
         if let dic = self.fetchedResultsController.object(at: indexPath) as? NSManagedObject {
             // title
@@ -25,7 +25,7 @@ extension MoviesTableViewController {
             if let posterPath = dic.value(forKey: "posterPath") as? String, let posterUrl = Api.sharedInstance.getImageUrl(for: posterPath) {
                 if (posterPath.trimmingCharacters(in: .whitespaces)) != "" {
                     
-                    // Kingfisher smartly caches the images
+                    // Kingfisher smartly caches the images. They will be available offline.
                     cell.posterImageView.kf.setImage(with: posterUrl)
                 }
             }
@@ -44,6 +44,19 @@ extension MoviesTableViewController {
             // overview
             if let overview = dic.value(forKey: "overview") as? String {
                 cell.overviewLabel.text = overview
+            }
+            
+            // movie id
+            if let movieId = dic.value(forKey: "id") as? Int64 {
+                cell.movieId = movieId
+                
+                if self.openMovieIds.contains(movieId) {
+                    cell.snapOpen()
+                } else {
+//                    cell.snapOpen(isOpen: false)
+                }
+            } else {
+//                cell.snapOpen(isOpen: false)
             }
         }
         

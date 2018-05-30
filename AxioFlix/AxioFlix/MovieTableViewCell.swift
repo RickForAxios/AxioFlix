@@ -21,21 +21,32 @@ class MovieTableViewCell: UITableViewCell {
         }
     }
     
-    weak var tableView: UITableView?
+    weak var tableViewController: MoviesTableViewController?
+    var movieId:Int64?
     
     @IBAction func showHideTouchUp(_ sender: Any) {
         let willBeHidden = !self.overviewContainer.isHidden
-        self.showHideButton.setTitle(willBeHidden ? "Show Overview" : "Hide Overview", for: .normal)
+        if let mId = self.movieId {
+//            self.tableViewController?.setMovie(movieId: mId, isOpen: !willBeHidden)
+        }
+//        self.showHideButton.setTitle(willBeHidden ? "Show Overview" : "Hide Overview", for: .normal)
         self.overviewContainer.isHidden = willBeHidden
-        self.layoutIfNeeded()
+//        self.layoutIfNeeded()
         
-        if let table = self.tableView {
+        if let table = self.tableViewController?.tableView {
             table.beginUpdates()
             table.endUpdates()
         }
     }
     
+    // show the overview without animation
+    // used when the TVC creates cells
+    func snapOpen() {
+        self.overviewContainer.isHidden = false
+    }
+    
+    // default to the closed state
     override func prepareForReuse() {
-        self.overviewContainer.isHidden = true
+//        self.overviewContainer.isHidden = true
     }
 }
