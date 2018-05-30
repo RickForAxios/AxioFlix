@@ -24,10 +24,12 @@ class MoviesTableViewController: UITableViewController, NSFetchedResultsControll
         self.dateFormatter = DateFormatter()
         self.dateFormatter.dateStyle = .medium
         
-        Api.sharedInstance.refresh()
-        
         self.initializeFetchedResultsController()
+        
+        Api.sharedInstance.fetchMovies(page: TmdbMoviesPage)
 
+        self.tableView.allowsSelection = false
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

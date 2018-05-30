@@ -12,15 +12,16 @@ import Foundation
 // This makes it simple to go from JSON to Swift,
 // and then to CoreData
 struct MovieModel: Codable {
-    let title: String
-    let overview: String
-    let poster_path: String
-    let popularity: Double
+    let title: String?
+    let overview: String?
+    let poster_path: String?
+    let popularity: Double?
     let id: Int64
 }
 
 struct MoviesModel: Codable {
     let page: Int
+    let total_pages: Int
     let results: [MovieModel]
 }
 
@@ -39,11 +40,12 @@ class Api {
     private var imagesBaseUrl: String = "https://image.tmdb.org/t/p"
     private var posterSizes: [String] = ["w92"]
     private var configLoadDate = Date(timeIntervalSince1970: 0)
+    private var nextMoviesPage:Int? = 0   // unused now, but we will need to get multiple pages soon
     
-    func refresh() {
+    func fetchMovies(page: Int) {
         self.fetchConfiguration { (didLoad) in
             if didLoad {
-                if let apiUrl = self.makeDiscoverUrl() {
+                if let apiUrl = self.makeDiscoverUrl(page: page) {
                     URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
                         //                print("Api done")
                         if let e = error {
@@ -51,9 +53,16 @@ class Api {
                             print("Got an error when hitting the API: \(e)")
                         } else if let movieData = data {
                             if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
-                                //                        print("decoded movies")
-                                
                                 persistMovies(movies.results)
+                                
+                                // setup for getting the next page (not currently implemented)
+                                if movies.page + 1 <= movies.total_pages {
+                                    self.nextMoviesPage = movies.page + 1
+                                } else {
+                                    self.nextMoviesPage = nil
+                                }
+                                
+                                print("next page of movies: \(self.nextMoviesPage ?? -1)")
                             } else {
                                 print("couldn't decode movie JSON")
                             }
@@ -70,7 +79,7 @@ class Api {
         return imageUrl
     }
     
-    private func makeDiscoverUrl() -> URL? {
+    private func makeDiscoverUrl(page: Int) -> URL? {
         var urlComponents = URLComponents(string: "\(TmdbBaseUrl)\(TmdbDiscoverEndpoint)")!
         
         urlComponents.queryItems = [
@@ -79,8 +88,8 @@ class Api {
             URLQueryItem(name: "sort_by", value: "popularity.desc"),
             URLQueryItem(name: "include_adult", value: String(false)),
             URLQueryItem(name: "include_video", value: String(false)),
-            URLQueryItem(name: "page", value: String(1)),
-            URLQueryItem(name: "primary_release_year", value: String(2016))
+            URLQueryItem(name: "page", value: String(page)),
+            URLQueryItem(name: "primary_release_year", value: String(TmdbReleaseYear))
         ];
         
         return urlComponents.url
