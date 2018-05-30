@@ -44,6 +44,13 @@ extension MoviesTableViewController {
             // overview
             if let overview = dic.value(forKey: "overview") as? String {
                 cell.overviewLabel.text = overview
+                if overview.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+                    cell.showHideButton.isEnabled = false
+                } else {
+                    cell.showHideButton.isEnabled = true
+                }
+            } else {
+                cell.showHideButton.isEnabled = false
             }
             
             // movie id

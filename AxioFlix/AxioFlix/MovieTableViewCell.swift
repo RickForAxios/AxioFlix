@@ -61,5 +61,10 @@ class MovieTableViewCell: UITableViewCell {
     // default to the closed state
     override func prepareForReuse() {
         self.overviewContainer.isHidden = true
+        self.titleLabel.text = nil
+        self.overviewLabel.text = nil
+        self.posterImageView.image = nil
+        self.releaseDateLabel.text = nil
+        self.movieId = nil
     }
 }
