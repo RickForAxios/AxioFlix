@@ -12,41 +12,37 @@ import Kingfisher
 
 extension MoviesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
         
         if let dic = self.fetchedResultsController.object(at: indexPath) as? NSManagedObject {
             // title
-            if let movieTitle = dic.value(forKey: "title") as? String, let titleLabel = cell.viewWithTag(1) as? UILabel {
-                titleLabel.text = movieTitle
+            if let movieTitle = dic.value(forKey: "title") as? String {
+                cell.titleLabel.text = movieTitle
             }
             
             // poster image
-            if let posterPath = dic.value(forKey: "posterPath") as? String, let posterImageView = cell.viewWithTag(2) as? UIImageView, let posterUrl = Api.sharedInstance.getImageUrl(for: posterPath) {
+            if let posterPath = dic.value(forKey: "posterPath") as? String, let posterUrl = Api.sharedInstance.getImageUrl(for: posterPath) {
                 if (posterPath.trimmingCharacters(in: .whitespaces)) != "" {
                     
                     // Kingfisher smartly caches the images
-                    posterImageView.kf.setImage(with: posterUrl)
+                    cell.posterImageView.kf.setImage(with: posterUrl)
                 }
             }
             
             // release date
-            if let releaseDate = dic.value(forKey: "releaseDate") as? Date, let releaseDateLabel = cell.viewWithTag(3) as? UILabel {
-                releaseDateLabel.text = self.dateFormatter.string(from: releaseDate)
+            if let releaseDate = dic.value(forKey: "releaseDate") as? Date {
+                cell.releaseDateLabel.text = self.dateFormatter.string(from: releaseDate)
             }
             
             // popularity score
-            if let popularity = dic.value(forKey: "popularity") as? Double, let popularityLabel = cell.viewWithTag(5) as? UILabel
+            if let popularity = dic.value(forKey: "popularity") as? Double
             {
-                popularityLabel.text = String(round(popularity))
+                cell.popularityLabel.text = String(round(popularity))
             }
             
-//            if let detailsButton = cell.viewWithTag(4) as? UIButton {
-//                detailsButton.act
-//            }
-            
             // overview
-            if let overview = dic.value(forKey: "overview") as? String, let overviewLabel = cell.viewWithTag(6) as? UILabel {
-                overviewLabel.text = overview
+            if let overview = dic.value(forKey: "overview") as? String {
+                cell.overviewText = overview
             }
         }
         

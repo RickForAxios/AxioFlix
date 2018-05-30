@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="140" id="1YL-gN-hJU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="140" id="1YL-gN-hJU" customClass="MovieTableViewCell" customModule="AxioFlix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1YL-gN-hJU" id="0QX-Ec-Und">
@@ -45,6 +44,9 @@
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-Br-UXO">
                                             <rect key="frame" x="134" y="56" width="106" height="30"/>
                                             <state key="normal" title="Show Overview"/>
+                                            <connections>
+                                                <action selector="showHideTouchUp:" destination="1YL-gN-hJU" eventType="touchUpInside" id="LkJ-dY-4XN"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2h-QT-Uq3">
                                             <rect key="frame" x="134" y="40" width="101" height="21"/>
@@ -84,6 +86,15 @@
                                         <constraint firstItem="Ui3-y3-H2O" firstAttribute="top" secondItem="3zH-Lk-Ylt" secondAttribute="bottom" constant="8" id="z61-jr-JVN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionBottomToBottom" destination="NQG-q1-eJV" id="ASi-B7-jCt"/>
+                                    <outlet property="overviewLabel" destination="pdj-Sn-YAc" id="Amx-gj-Acp"/>
+                                    <outlet property="popularityLabel" destination="YFK-xE-j73" id="MLT-Cl-Zeu"/>
+                                    <outlet property="posterImageView" destination="Ui3-y3-H2O" id="Ezh-li-7Ye"/>
+                                    <outlet property="releaseDateLabel" destination="J2h-QT-Uq3" id="2zD-fW-QmN"/>
+                                    <outlet property="showHideButton" destination="hkg-Br-UXO" id="bQl-iy-Jzw"/>
+                                    <outlet property="titleLabel" destination="3zH-Lk-Ylt" id="DB4-h1-lFe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

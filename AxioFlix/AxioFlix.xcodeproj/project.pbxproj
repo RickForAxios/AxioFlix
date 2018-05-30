@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052FCD314423DC0C4CCFBDA8 /* Pods_AxioFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0EC7BFC7F4B2C39881CA2 /* Pods_AxioFlix.framework */; };
+		0B9A12C420BCE553004E654F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */; };
 		0BA1E0A920B9E95A00529FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */; };
 		0BA1E0AE20B9E95A00529FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */; };
 		0BA1E0B120B9E95A00529FD8 /* AxioFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0AF20B9E95A00529FD8 /* AxioFlix.xcdatamodeld */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		0334DA18647D66AFCE37C012 /* Pods-AxioFlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxioFlixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AxioFlixUITests/Pods-AxioFlixUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		0BA1E0A520B9E95A00529FD8 /* AxioFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxioFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BA1E0AD20B9E95A00529FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0BA1E0D920B9EC3300529FD8 /* MoviesTableViewController.swift */,
 				0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */,
 				0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */,
+				0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */,
 				0BA1E0DD20B9EC6200529FD8 /* Movies.xcdatamodeld */,
 				0BA1E0E220BA082700529FD8 /* Config.swift */,
 				0BA1E0B220B9E95C00529FD8 /* Assets.xcassets */,
@@ -424,6 +427,7 @@
 				0BA1E0EF20BA149200529FD8 /* Api.swift in Sources */,
 				0BA1E0FB20BC98FB00529FD8 /* MovieTVCDataSource.swift in Sources */,
 				0BA1E0F720BB97A500529FD8 /* MovieMO.swift in Sources */,
+				0B9A12C420BCE553004E654F /* MovieTableViewCell.swift in Sources */,
 				0BA1E0E320BA082700529FD8 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
