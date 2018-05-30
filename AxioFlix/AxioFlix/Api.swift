@@ -36,39 +36,31 @@ struct TmdbConfiguration: Codable {
 class Api {
     static let sharedInstance = Api()
     private let decoder = JSONDecoder()
-    private var hasLoadedConfig = false
     private var imagesBaseUrl: String = "https://image.tmdb.org/t/p"
     private var posterSizes: [String] = ["w92"]
-    
-    init() {
-        self.loadConfiguration { (didLoad) in
-            if didLoad {
-                self.refresh()
-            }
-        }
-    }
+    private var configLoadDate = Date(timeIntervalSince1970: 0)
     
     func refresh() {
-//        guard self.hasLoadedConfig else {
-//            return
-//        }
-        
-        if let apiUrl = self.makeDiscoverUrl() {
-            URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
-//                print("Api done")
-                if let e = error {
-                    // TODO: do something appropriate with this error
-                    print("Got an error when hitting the API: \(e)")
-                } else if let movieData = data {
-                    if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
-//                        print("decoded movies")
-                        
-                        persistMovies(movies.results)
-                    } else {
-                        print("couldn't decode movie JSON")
-                    }
+        self.fetchConfiguration { (didLoad) in
+            if didLoad {
+                if let apiUrl = self.makeDiscoverUrl() {
+                    URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
+                        //                print("Api done")
+                        if let e = error {
+                            // TODO: do something appropriate with this error, like send it to a canary monitor
+                            print("Got an error when hitting the API: \(e)")
+                        } else if let movieData = data {
+                            if let movies = try? self.decoder.decode(MoviesModel.self, from: movieData) {
+                                //                        print("decoded movies")
+                                
+                                persistMovies(movies.results)
+                            } else {
+                                print("couldn't decode movie JSON")
+                            }
+                        }
+                    }.resume()
                 }
-            }.resume()
+            }
         }
     }
     
@@ -79,7 +71,7 @@ class Api {
     }
     
     private func makeDiscoverUrl() -> URL? {
-        var urlComponents = URLComponents(string: TmdbApiUrl)!
+        var urlComponents = URLComponents(string: "\(TmdbBaseUrl)\(TmdbDiscoverEndpoint)")!
         
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key", value: TmdbApiKey),
@@ -94,8 +86,14 @@ class Api {
         return urlComponents.url
     }
     
-    private func loadConfiguration(_ callback: @escaping (Bool) -> ()) {
-        var urlComponents = URLComponents(string: TmdbConfigUrl)!
+    private func fetchConfiguration(_ callback: @escaping (Bool) -> ()) {
+        // don't refresh the
+        guard self.configLoadDate.timeIntervalSinceNow < (TmdbConfigTimeout * -1) else {
+            callback(true)
+            return
+        }
+        
+        var urlComponents = URLComponents(string: "\(TmdbBaseUrl)\(TmdbConfigEndpoint)")!
         
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key", value: TmdbApiKey)
@@ -111,13 +109,13 @@ class Api {
                 if let config = try? self.decoder.decode(TmdbConfiguration.self, from: configData) {
                     self.imagesBaseUrl = config.images.secure_base_url
                     self.posterSizes = config.images.poster_sizes
-                    self.hasLoadedConfig = true
+                    self.configLoadDate = Date()
                     
                     callback(true)
                 } else {
                     callback(false)
                 }
             }
-        }
+        }.resume()
     }
 }

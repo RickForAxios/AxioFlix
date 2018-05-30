@@ -11,7 +11,9 @@ import Foundation
 // We default to sorting by Popularity. A good enhancement would be to let the user sort by other fields.
 let DefaultSortField = "popularity"
 
-// The API hits just 1 URL for now
-let TmdbApiUrl = "https://api.themoviedb.org/3/discover/movie"
-let TmdbConfigUrl = "https://api.themoviedb.org/3/config"
+// API constants
+let TmdbBaseUrl = "https://api.themoviedb.org/3"
+let TmdbDiscoverEndpoint = "/discover/movie"
+let TmdbConfigEndpoint = "/configuration"
 let TmdbApiKey = "1821c6b6049945b0e08619035590d15b"
+let TmdbConfigTimeout:TimeInterval = 3600

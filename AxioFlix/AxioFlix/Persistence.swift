@@ -1,5 +1,5 @@
 //
-//  CoreDataStack.swift
+//  Persistence.swift
 //  AxioFlix
 //
 //  Created by Rick Terrill on 5/26/18.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-// CoreData helpers
+// CoreData handles persistence
 
 func getPersistentContainer() -> NSPersistentContainer {
     return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
@@ -28,6 +28,8 @@ func persistMovie(_ movie: MovieModel, inContext context: NSManagedObjectContext
     managedObject.setValue(Date(), forKey: "releaseDate")
 }
 
+// The main func that the API will use to persist results.
+// Note that we could swap out CoreData without affecting the API layer
 func persistMovies(_ movies: [MovieModel]) {
     DispatchQueue.main.async {
         getPersistentContainer().performBackgroundTask { context in

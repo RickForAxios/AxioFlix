@@ -26,9 +26,9 @@
 		0BA1E0E320BA082700529FD8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0E220BA082700529FD8 /* Config.swift */; };
 		0BA1E0E420BA082700529FD8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0E220BA082700529FD8 /* Config.swift */; };
 		0BA1E0E520BA082700529FD8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0E220BA082700529FD8 /* Config.swift */; };
-		0BA1E0EB20BA0F6B00529FD8 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* CoreData.swift */; };
-		0BA1E0EC20BA0F6B00529FD8 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* CoreData.swift */; };
-		0BA1E0ED20BA0F6B00529FD8 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* CoreData.swift */; };
+		0BA1E0EB20BA0F6B00529FD8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */; };
+		0BA1E0EC20BA0F6B00529FD8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */; };
+		0BA1E0ED20BA0F6B00529FD8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */; };
 		0BA1E0EF20BA149200529FD8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EE20BA149200529FD8 /* Api.swift */; };
 		0BA1E0F020BA149200529FD8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EE20BA149200529FD8 /* Api.swift */; };
 		0BA1E0F120BA149200529FD8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1E0EE20BA149200529FD8 /* Api.swift */; };
@@ -82,7 +82,7 @@
 		0BA1E0D920B9EC3300529FD8 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		0BA1E0DE20B9EC6300529FD8 /* Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movies.xcdatamodel; sourceTree = "<group>"; };
 		0BA1E0E220BA082700529FD8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		0BA1E0EA20BA0F6B00529FD8 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0BA1E0EE20BA149200529FD8 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0BA1E0F620BB97A500529FD8 /* MovieMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMO.swift; sourceTree = "<group>"; };
 		0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTVCDataSource.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */,
-				0BA1E0EA20BA0F6B00529FD8 /* CoreData.swift */,
+				0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */,
 				0BA1E0F620BB97A500529FD8 /* MovieMO.swift */,
 				0BA1E0EE20BA149200529FD8 /* Api.swift */,
 				0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */,
@@ -422,7 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9193C620BF2CB600C55334 /* MovieTVCState.swift in Sources */,
-				0BA1E0EB20BA0F6B00529FD8 /* CoreData.swift in Sources */,
+				0BA1E0EB20BA0F6B00529FD8 /* Persistence.swift in Sources */,
 				0BA1E0DA20B9EC3300529FD8 /* MoviesTableViewController.swift in Sources */,
 				0BA1E0DF20B9EC6300529FD8 /* Movies.xcdatamodeld in Sources */,
 				0BA1E0A920B9E95A00529FD8 /* AppDelegate.swift in Sources */,
@@ -441,7 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA1E0F020BA149200529FD8 /* Api.swift in Sources */,
-				0BA1E0EC20BA0F6B00529FD8 /* CoreData.swift in Sources */,
+				0BA1E0EC20BA0F6B00529FD8 /* Persistence.swift in Sources */,
 				0BA1E0DB20B9EC3300529FD8 /* MoviesTableViewController.swift in Sources */,
 				0BA1E0FC20BC98FB00529FD8 /* MovieTVCDataSource.swift in Sources */,
 				0BA1E10020BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift in Sources */,
@@ -457,7 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA1E0F120BA149200529FD8 /* Api.swift in Sources */,
-				0BA1E0ED20BA0F6B00529FD8 /* CoreData.swift in Sources */,
+				0BA1E0ED20BA0F6B00529FD8 /* Persistence.swift in Sources */,
 				0BA1E0DC20B9EC3300529FD8 /* MoviesTableViewController.swift in Sources */,
 				0BA1E0FD20BC98FB00529FD8 /* MovieTVCDataSource.swift in Sources */,
 				0BA1E10120BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift in Sources */,
