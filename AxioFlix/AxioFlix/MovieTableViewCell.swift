@@ -15,41 +15,29 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var showHideButton: UIButton!
     @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var overviewContainer: UIView!
+    @IBOutlet weak var overviewContainer: UIView! {
+        didSet {
+            overviewContainer.isHidden = true
+        }
+    }
     
-    private var shouldShowOverview = false
+    weak var tableView: UITableView?
+    
     var overviewText:String = ""
     
-
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.reset()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        self.reset()
-    }
-    
     @IBAction func showHideTouchUp(_ sender: Any) {
-//        self.shouldShowOverview = !self.shouldShowOverview
-
         UIView.animate(withDuration: 0.3) {
             self.overviewContainer.isHidden = !self.overviewContainer.isHidden
+            self.layoutIfNeeded()
         }
-//        if self.shouldShowOverview {
-//            self.overviewLabel.text = self.overviewText
-//        } else {
-//            self.overviewLabel.text = ""
-//        }
+        
+        if let table = self.tableView {
+            table.beginUpdates()
+            table.endUpdates()
+        }
     }
     
     override func prepareForReuse() {
-        self.reset()
-    }
-    
-    private func reset() {
-        shouldShowOverview = false
-//        overviewLabel.text = ""
+        self.overviewLabel.isHidden = true
     }
 }

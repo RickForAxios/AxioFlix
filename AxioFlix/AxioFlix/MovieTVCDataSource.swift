@@ -13,6 +13,7 @@ import Kingfisher
 extension MoviesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
+        cell.tableView = self.tableView
         
         if let dic = self.fetchedResultsController.object(at: indexPath) as? NSManagedObject {
             // title

@@ -32,7 +32,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zH-Lk-Ylt">
-                                                            <rect key="frame" x="20" y="20" width="83.5" height="20.5"/>
+                                                            <rect key="frame" x="20" y="20" width="335" height="20.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="GyO-dl-YKs"/>
                                                             </constraints>
@@ -67,16 +67,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.3156868666" blue="0.95762299939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="YFK-xE-j73" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J2h-QT-Uq3" secondAttribute="trailing" id="19j-zo-UDu"/>
                                                         <constraint firstItem="Ui3-y3-H2O" firstAttribute="top" secondItem="3zH-Lk-Ylt" secondAttribute="bottom" constant="8" symbolic="YES" id="GXA-8c-93Z"/>
-                                                        <constraint firstItem="J2h-QT-Uq3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3zH-Lk-Ylt" secondAttribute="trailing" id="GlZ-Ck-ghv"/>
                                                         <constraint firstAttribute="bottom" secondItem="Ui3-y3-H2O" secondAttribute="bottom" constant="20" symbolic="YES" id="MpS-wY-4qe"/>
                                                         <constraint firstItem="hkg-Br-UXO" firstAttribute="centerX" secondItem="NK6-Pc-P8p" secondAttribute="centerX" id="RqI-2Z-nom"/>
                                                         <constraint firstItem="hkg-Br-UXO" firstAttribute="bottom" secondItem="Ui3-y3-H2O" secondAttribute="bottom" id="Tkg-3v-KHr"/>
                                                         <constraint firstItem="YFK-xE-j73" firstAttribute="centerY" secondItem="Ui3-y3-H2O" secondAttribute="centerY" id="VrL-Y5-LHk"/>
                                                         <constraint firstItem="J2h-QT-Uq3" firstAttribute="top" secondItem="Ui3-y3-H2O" secondAttribute="top" id="Z8y-ZT-K8Y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3zH-Lk-Ylt" secondAttribute="trailing" constant="20" symbolic="YES" id="ZlQ-Gq-10v"/>
                                                         <constraint firstItem="Ui3-y3-H2O" firstAttribute="leading" secondItem="3zH-Lk-Ylt" secondAttribute="leading" id="izD-2O-ph8"/>
                                                         <constraint firstAttribute="trailing" secondItem="YFK-xE-j73" secondAttribute="trailing" constant="20" symbolic="YES" id="kuv-BY-bMY"/>
                                                         <constraint firstItem="J2h-QT-Uq3" firstAttribute="leading" secondItem="hkg-Br-UXO" secondAttribute="leading" id="qcx-L7-FTE"/>
@@ -84,36 +83,39 @@
                                                         <constraint firstItem="3zH-Lk-Ylt" firstAttribute="top" secondItem="NK6-Pc-P8p" secondAttribute="top" constant="20" symbolic="YES" id="xKw-5o-9Sm"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pc-Da-Hbe">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htZ-bo-Ale">
                                                     <rect key="frame" x="0.0" y="114.5" width="375" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very long label. It will wrap line and its content will determine the height of the stackview, and hence the cell." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhk-Yo-Zw0">
-                                                            <rect key="frame" x="20" y="20" width="335" height="145"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.2876030296" green="1" blue="0.31365411430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="top" secondItem="5Pc-Da-Hbe" secondAttribute="top" constant="20" symbolic="YES" id="RkI-Z2-k8F"/>
-                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="leading" secondItem="5Pc-Da-Hbe" secondAttribute="leading" constant="20" symbolic="YES" id="XJV-rA-VhZ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zhk-Yo-Zw0" secondAttribute="trailing" constant="20" symbolic="YES" id="bMd-K6-rlg"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zhk-Yo-Zw0" secondAttribute="bottom" constant="20" symbolic="YES" id="pCF-xx-f5e"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zhk-Yo-Zw0" secondAttribute="trailing" id="7Av-lz-gMg"/>
+                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="top" secondItem="htZ-bo-Ale" secondAttribute="top" id="dSL-Yy-zPu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zhk-Yo-Zw0" secondAttribute="bottom" priority="250" constant="20" symbolic="YES" id="nbQ-Bg-vuT"/>
+                                                        <constraint firstItem="zhk-Yo-Zw0" firstAttribute="leading" secondItem="htZ-bo-Ale" secondAttribute="leading" id="owy-cd-Ybs"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="htZ-bo-Ale" firstAttribute="leading" secondItem="Aom-ry-1sh" secondAttribute="leading" id="MHZ-R2-hrU"/>
+                                                <constraint firstAttribute="trailing" secondItem="htZ-bo-Ale" secondAttribute="trailing" id="UNO-XH-AFs"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Aom-ry-1sh" firstAttribute="top" secondItem="0QX-Ec-Und" secondAttribute="top" id="DJN-wB-cDx"/>
                                         <constraint firstItem="Aom-ry-1sh" firstAttribute="leading" secondItem="0QX-Ec-Und" secondAttribute="leading" id="O2U-na-2pF"/>
-                                        <constraint firstAttribute="bottom" secondItem="Aom-ry-1sh" secondAttribute="bottom" id="OeH-r8-JE5"/>
+                                        <constraint firstAttribute="bottom" secondItem="Aom-ry-1sh" secondAttribute="bottom" priority="750" id="OeH-r8-JE5"/>
                                         <constraint firstAttribute="trailing" secondItem="Aom-ry-1sh" secondAttribute="trailing" id="cgv-fA-Kfx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="overviewContainer" destination="5Pc-Da-Hbe" id="Y3x-4r-5UF"/>
+                                    <outlet property="overviewContainer" destination="htZ-bo-Ale" id="9bT-cJ-dYa"/>
                                     <outlet property="overviewLabel" destination="zhk-Yo-Zw0" id="log-wU-PfB"/>
                                     <outlet property="popularityLabel" destination="YFK-xE-j73" id="MLT-Cl-Zeu"/>
                                     <outlet property="posterImageView" destination="Ui3-y3-H2O" id="Ezh-li-7Ye"/>
