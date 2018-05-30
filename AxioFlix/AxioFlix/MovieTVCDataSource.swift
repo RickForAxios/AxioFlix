@@ -42,6 +42,7 @@ extension MoviesTableViewController {
             
             // overview
             if let overview = dic.value(forKey: "overview") as? String {
+                cell.overviewLabel.text = overview
                 cell.overviewText = overview
             }
         }

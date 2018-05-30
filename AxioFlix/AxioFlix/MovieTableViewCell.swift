@@ -15,10 +15,12 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var showHideButton: UIButton!
     @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var overviewContainer: UIView!
     
     private var shouldShowOverview = false
     var overviewText:String = ""
     
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.reset()
@@ -30,13 +32,16 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     @IBAction func showHideTouchUp(_ sender: Any) {
-        self.shouldShowOverview = !self.shouldShowOverview
-        
-        if self.shouldShowOverview {
-            self.overviewLabel.text = self.overviewText
-        } else {
-            self.overviewLabel.text = ""
+//        self.shouldShowOverview = !self.shouldShowOverview
+
+        UIView.animate(withDuration: 0.3) {
+            self.overviewContainer.isHidden = !self.overviewContainer.isHidden
         }
+//        if self.shouldShowOverview {
+//            self.overviewLabel.text = self.overviewText
+//        } else {
+//            self.overviewLabel.text = ""
+//        }
     }
     
     override func prepareForReuse() {
