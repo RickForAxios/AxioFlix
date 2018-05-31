@@ -26,6 +26,7 @@ func persistMovie(_ movie: MovieModel, inContext context: NSManagedObjectContext
     managedObject.setValue("", forKey: "backdropPath")
     managedObject.setValue(movie.poster_path, forKey: "posterPath")
     managedObject.setValue(movie.release_date, forKey: "releaseDate")
+    managedObject.setValue(Date(), forKey: "updatedAt")
 }
 
 // The main func that the API will use to persist results.

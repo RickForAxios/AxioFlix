@@ -44,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    
+    // NOTE: I left the default CoreData implementation in-tact
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
