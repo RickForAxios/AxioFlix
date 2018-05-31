@@ -8,14 +8,15 @@
 
 import Foundation
 
-// Simple model of the TMDb data.
+// Basic model of the TMDb data.
 // This makes it simple to go from JSON to Swift,
-// and then to CoreData
+// and then to the persistent model layer
 struct MovieModel: Codable {
     let title: String?
     let overview: String?
     let poster_path: String?
     let popularity: Double?
+    let release_date: Date?
     let id: Int64
 }
 
@@ -41,6 +42,12 @@ class Api {
     private var posterSizes: [String] = ["w92"]
     private var configLoadDate = Date(timeIntervalSince1970: 0)
     private var nextMoviesPage:Int? = 0   // unused now, but we will need to get multiple pages soon
+    
+    init() {
+        let tmdbDateFormatter = DateFormatter()
+        tmdbDateFormatter.dateFormat = "yyyy-MM-dd"
+        self.decoder.dateDecodingStrategy = .formatted(tmdbDateFormatter)
+    }
     
     func fetchMovies(page: Int) {
         self.fetchConfiguration { (didLoad) in
