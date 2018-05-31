@@ -59,12 +59,8 @@ extension MoviesTableViewController {
                 
                 if self.openMovieIds.contains(movieId) {
                     cell.snapOpen()
-                } else {
-//                    cell.snapOpen(isOpen: false)
                 }
-            } else {
-//                cell.snapOpen(isOpen: false)
-            }
+            }            
         }
         
         return cell
