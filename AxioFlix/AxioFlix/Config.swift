@@ -20,3 +20,4 @@ let TmdbConfigTimeout:TimeInterval = 3600
 let TmdbReleaseYear: UInt = 2016
 // changing the page and re-running the app will bring in additional results. Try 100 for a movie with no poster or overview
 let TmdbMoviesPage: Int = 1
+let PreferredPosterWidth = 92

@@ -81,7 +81,8 @@ class Api {
     }
     
     func getImageUrl(for imagePath: String) -> URL? {
-        let imageUrl = URL(string: self.imagesBaseUrl)?.appendingPathComponent("w92").appendingPathComponent(imagePath)
+        let posterWidth = self.makePosterWidth()
+        let imageUrl = URL(string: self.imagesBaseUrl)?.appendingPathComponent(posterWidth).appendingPathComponent(imagePath)
         
         return imageUrl
     }
@@ -133,5 +134,33 @@ class Api {
                 }
             }
         }.resume()
+    }
+    
+    private func makePosterWidth() -> String {
+        // conver the strings from the API to ints
+        let posterSizeInts = self.posterSizes.compactMap { (width) -> Int? in
+            if width.first == "w" {
+                let numStr = String(width.dropFirst())
+                if let num = Int(numStr) {
+                    return num
+                } else {
+                    return nil
+                }
+            } else {
+                return nil
+            }
+        }
+        
+        // find the int that is closest to our preferred width
+        var distance = Int.max
+        var closest = posterSizeInts.first ?? 92
+        posterSizeInts.forEach { (size) in
+            if abs(size - PreferredPosterWidth) < distance {
+                closest = size
+                distance = abs(size - PreferredPosterWidth)
+            }
+        }
+        
+        return "w\(closest)"
     }
 }
