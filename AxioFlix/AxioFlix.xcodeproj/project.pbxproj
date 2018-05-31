@@ -125,6 +125,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1223E120BF7BB900C6313E /* Movies Table */ = {
+			isa = PBXGroup;
+			children = (
+				0BA1E0D920B9EC3300529FD8 /* MoviesTableViewController.swift */,
+				0B9193C520BF2CB600C55334 /* MovieTVCState.swift */,
+				0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */,
+				0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */,
+				0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */,
+			);
+			path = "Movies Table";
+			sourceTree = "<group>";
+		};
+		0B1223E220BF7C6A00C6313E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BA1E0DD20B9EC6200529FD8 /* Movies.xcdatamodeld */,
+				0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */,
+				0BA1E0F620BB97A500529FD8 /* MovieMO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0BA1E09C20B9E95A00529FD8 = {
 			isa = PBXGroup;
 			children = (
@@ -151,16 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				0BA1E0A820B9E95A00529FD8 /* AppDelegate.swift */,
-				0BA1E0EA20BA0F6B00529FD8 /* Persistence.swift */,
-				0BA1E0F620BB97A500529FD8 /* MovieMO.swift */,
+				0B1223E220BF7C6A00C6313E /* Model */,
 				0BA1E0EE20BA149200529FD8 /* Api.swift */,
 				0BA1E0AC20B9E95A00529FD8 /* Main.storyboard */,
-				0BA1E0D920B9EC3300529FD8 /* MoviesTableViewController.swift */,
-				0B9193C520BF2CB600C55334 /* MovieTVCState.swift */,
-				0BA1E0FE20BC9B8F00529FD8 /* MovieTVCFetchedResultsControllerDelegate.swift */,
-				0BA1E0FA20BC98FB00529FD8 /* MovieTVCDataSource.swift */,
-				0B9A12C320BCE553004E654F /* MovieTableViewCell.swift */,
-				0BA1E0DD20B9EC6200529FD8 /* Movies.xcdatamodeld */,
+				0B1223E120BF7BB900C6313E /* Movies Table */,
 				0BA1E0E220BA082700529FD8 /* Config.swift */,
 				0BA1E0B220B9E95C00529FD8 /* Assets.xcassets */,
 				0BA1E0B420B9E95C00529FD8 /* LaunchScreen.storyboard */,

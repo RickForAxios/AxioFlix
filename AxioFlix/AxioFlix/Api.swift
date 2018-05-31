@@ -69,7 +69,7 @@ class Api {
                                     self.nextMoviesPage = nil
                                 }
                                 
-                                print("next page of movies: \(self.nextMoviesPage ?? -1)")
+//                                print("next page of movies: \(self.nextMoviesPage ?? -1)")
                             } else {
                                 print("couldn't decode movie JSON")
                             }
