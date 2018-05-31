@@ -38,7 +38,7 @@ extension MoviesTableViewController {
             // popularity score
             if let popularity = dic.value(forKey: "popularity") as? Double
             {
-                cell.popularityLabel.text = String(round(popularity))
+                cell.popularityLabel.text = String(Int(round(popularity)))
             }
             
             // overview
